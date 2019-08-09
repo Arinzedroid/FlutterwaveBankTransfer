@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        tools:context=".MainActivity">
+
+
+    <RelativeLayout
+            android:layout_above="@+id/pay"
+            android:id="@+id/rel"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/name_text"
+                android:text="Bank Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/name_text"
+                android:id="@+id/bank_name"
+                tools:text="Hamfield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/acct_text"
+                android:text="Account number"
+                android:layout_below="@+id/bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_below="@+id/bank_name"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/acct_text"
+                android:id="@+id/acct"
+                tools:text="12345678"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/status_text"
+                android:text="Account Status"
+                android:layout_below="@+id/acct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_below="@+id/acct"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/status_text"
+                android:id="@+id/status"
+                tools:text="ACTIVE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/expiry_text"
+                android:text="Account Expiry"
+                android:layout_below="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_below="@+id/status"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/status_text"
+                android:id="@+id/expiry"
+                tools:text="2012-2-19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/amt_text"
+                android:text="Amount"
+                android:layout_below="@+id/expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_below="@+id/expiry"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/amt_text"
+                android:id="@+id/amt"
+                tools:text="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/note_text"
+                android:text="Note"
+                android:layout_below="@+id/amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_below="@+id/amt"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/note_text"
+                android:id="@+id/note"
+                tools:text="Transfer to ..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <Button
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay N100"
+            android:layout_margin="20dp"
+            android:id="@+id/pay"
+            />
+
+    <ProgressBar
+            android:id="@+id/progress"
+            android:layout_below="@+id/pay"
+            android:layout_centerHorizontal="true"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>
