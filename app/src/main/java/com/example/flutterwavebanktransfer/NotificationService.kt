@@ -25,7 +25,7 @@ class NotificationService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         initSocket()
-        return super.onStartCommand(intent, flags, startId)
+        return START_STICKY
     }
 
     private fun initSocket(){
@@ -36,7 +36,6 @@ class NotificationService : Service() {
         }catch (ex: Exception){
             ex.printStackTrace()
         }
-
         connectSocket()
     }
 
