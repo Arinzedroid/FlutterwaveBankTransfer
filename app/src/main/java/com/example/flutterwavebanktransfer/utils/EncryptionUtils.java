@@ -7,7 +7,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 
-public class EncryptionUtilsJava {
+public class EncryptionUtils {
     //The `getEncryptedData` method needs to be called first to clean the secret key, all other methods are used inside it.
 
     private static String encrypt(String data, String key) throws Exception {

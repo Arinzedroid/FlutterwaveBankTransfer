@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:minHeight="500dp"
+        android:minWidth="300dp"
+        tools:context=".fragment.ResultDialogFragment">
+
+    <TextView
+            android:id="@+id/curr"
+            android:text="NGN "
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_alignBaseline="@+id/amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/amt"
+            tools:text="100"
+            android:visibility="gone"
+            android:layout_toEndOf="@+id/curr"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <TextView
+            android:id="@+id/email"
+            tools:text="arinze@gmail.com "
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:layout_below="@+id/amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/email"
+            android:id="@+id/desc"
+            tools:text="Please make a bank transfer to John "
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/amt_text"
+            android:text="Amount"
+            android:layout_below="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/amt_2"
+            tools:text="NGN 100"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <View
+            android:id="@+id/view1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@+id/amt_2"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    <TextView
+            android:id="@+id/acc_text"
+            android:text="Account Number"
+            android:layout_below="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/acct"
+            tools:text="1004536272"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/expiry_text"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:text="This account number expires in"
+            android:layout_below="@+id/acc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:textColor="#F7AF40"
+            android:id="@+id/expiry"
+            tools:text="59 mins"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/acct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <View
+            android:id="@+id/view2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@+id/expiry"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+    <TextView
+            android:id="@+id/bank_text"
+            android:text="Bank Name"
+            android:layout_below="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/bank_name"
+            tools:text="HighStreet MFB"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <View
+            android:id="@+id/view3"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@+id/bank_name"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+    <TextView
+            android:id="@+id/beneficiary_text"
+            android:text="Beneficiary"
+            android:layout_below="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/beneficiary"
+            android:text="John Doe"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <View
+            android:id="@+id/view4"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@+id/beneficiary"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+    <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/l_view"
+            android:layout_below="@+id/view4"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+
+                android:id="@+id/waitin_text"
+                android:text="Waiting on payment to be made"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <ProgressBar
+                android:layout_marginTop="5dp"
+                android:id="@+id/progress"
+                android:layout_marginStart="10dp"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+            android:id="@+id/f_view"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/l_view"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:textAllCaps="false"
+                android:text="Confirm payment"
+                android:background="@drawable/button_state"
+                android:textColor="#FFFFFF"
+                android:id="@+id/confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <ProgressBar
+                android:visibility="invisible"
+                android:elevation="10dp"
+                android:id="@+id/progress_on_button"
+                android:layout_marginEnd="20dp"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_gravity="end|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <TextView
+            android:textSize="12sp"
+            android:text="Confirm payment if you think payment have been made. "
+            android:id="@+id/confirm_desc"
+            android:layout_below="@id/f_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
